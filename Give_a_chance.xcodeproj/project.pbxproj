@@ -14,6 +14,17 @@
 		2D1E7A81286134B500070A0A /* Give_a_chance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A7F286134B500070A0A /* Give_a_chance.xcdatamodeld */; };
 		2D1E7A83286134B600070A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1E7A82286134B600070A0A /* Assets.xcassets */; };
 		2D1E7A86286134B600070A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1E7A84286134B600070A0A /* LaunchScreen.storyboard */; };
+		2D1E7A902861363A00070A0A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A8F2861363A00070A0A /* StartViewController.swift */; };
+		2D1E7A932861367D00070A0A /* PaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A922861367D00070A0A /* PaletteApp.swift */; };
+		2D1E7A95286136A000070A0A /* ListImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A94286136A000070A0A /* ListImages.swift */; };
+		2D1E7A97286136BC00070A0A /* OurFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A96286136BC00070A0A /* OurFonts.swift */; };
+		2D1E7A9B2861373F00070A0A /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A9A2861373F00070A0A /* UIColor+HEX.swift */; };
+		2D1E7A9F2861377B00070A0A /* StartOnbording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7A9E2861377B00070A0A /* StartOnbording.swift */; };
+		2D1E7AA6286137A700070A0A /* FirstOnbordingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA1286137A700070A0A /* FirstOnbordingPresenter.swift */; };
+		2D1E7AA7286137A700070A0A /* FirstOnbordingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA2286137A700070A0A /* FirstOnbordingRouter.swift */; };
+		2D1E7AA8286137A700070A0A /* FirstOnbordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA3286137A700070A0A /* FirstOnbordingViewController.swift */; };
+		2D1E7AA9286137A700070A0A /* FirstOnbordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA4286137A700070A0A /* FirstOnbordingInteractor.swift */; };
+		2D1E7AAA286137A700070A0A /* FirstOnbordingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA5286137A700070A0A /* FirstOnbordingConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		2D1E7A82286134B600070A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D1E7A85286134B600070A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D1E7A87286134B600070A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1E7A8F2861363A00070A0A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2D1E7A922861367D00070A0A /* PaletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteApp.swift; sourceTree = "<group>"; };
+		2D1E7A94286136A000070A0A /* ListImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImages.swift; sourceTree = "<group>"; };
+		2D1E7A96286136BC00070A0A /* OurFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFonts.swift; sourceTree = "<group>"; };
+		2D1E7A9A2861373F00070A0A /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
+		2D1E7A9E2861377B00070A0A /* StartOnbording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnbording.swift; sourceTree = "<group>"; };
+		2D1E7AA1286137A700070A0A /* FirstOnbordingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingPresenter.swift; sourceTree = "<group>"; };
+		2D1E7AA2286137A700070A0A /* FirstOnbordingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingRouter.swift; sourceTree = "<group>"; };
+		2D1E7AA3286137A700070A0A /* FirstOnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingViewController.swift; sourceTree = "<group>"; };
+		2D1E7AA4286137A700070A0A /* FirstOnbordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingInteractor.swift; sourceTree = "<group>"; };
+		2D1E7AA5286137A700070A0A /* FirstOnbordingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,9 @@
 		2D1E7A75286134B500070A0A /* Give_a_chance */ = {
 			isa = PBXGroup;
 			children = (
+				2D1E7A9C2861376100070A0A /* Onbording */,
+				2D1E7A982861371F00070A0A /* Extensions */,
+				2D1E7A8D2861361400070A0A /* Application */,
 				2D1E7A76286134B500070A0A /* AppDelegate.swift */,
 				2D1E7A78286134B500070A0A /* SceneDelegate.swift */,
 				2D1E7A7A286134B500070A0A /* ViewController.swift */,
@@ -68,6 +93,78 @@
 				2D1E7A7F286134B500070A0A /* Give_a_chance.xcdatamodeld */,
 			);
 			path = Give_a_chance;
+			sourceTree = "<group>";
+		};
+		2D1E7A8D2861361400070A0A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A912861366200070A0A /* OurSettings */,
+				2D1E7A8E2861361F00070A0A /* View */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2D1E7A8E2861361F00070A0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A8F2861363A00070A0A /* StartViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D1E7A912861366200070A0A /* OurSettings */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A922861367D00070A0A /* PaletteApp.swift */,
+				2D1E7A94286136A000070A0A /* ListImages.swift */,
+				2D1E7A96286136BC00070A0A /* OurFonts.swift */,
+			);
+			path = OurSettings;
+			sourceTree = "<group>";
+		};
+		2D1E7A982861371F00070A0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A992861372900070A0A /* UIColor */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D1E7A992861372900070A0A /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A9A2861373F00070A0A /* UIColor+HEX.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		2D1E7A9C2861376100070A0A /* Onbording */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7AA02861379400070A0A /* FirstOnbording */,
+				2D1E7A9D2861376B00070A0A /* StartOnbording */,
+			);
+			path = Onbording;
+			sourceTree = "<group>";
+		};
+		2D1E7A9D2861376B00070A0A /* StartOnbording */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7A9E2861377B00070A0A /* StartOnbording.swift */,
+			);
+			path = StartOnbording;
+			sourceTree = "<group>";
+		};
+		2D1E7AA02861379400070A0A /* FirstOnbording */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E7AA1286137A700070A0A /* FirstOnbordingPresenter.swift */,
+				2D1E7AA2286137A700070A0A /* FirstOnbordingRouter.swift */,
+				2D1E7AA3286137A700070A0A /* FirstOnbordingViewController.swift */,
+				2D1E7AA4286137A700070A0A /* FirstOnbordingInteractor.swift */,
+				2D1E7AA5286137A700070A0A /* FirstOnbordingConfigurator.swift */,
+			);
+			path = FirstOnbording;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +238,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1E7A95286136A000070A0A /* ListImages.swift in Sources */,
+				2D1E7A9B2861373F00070A0A /* UIColor+HEX.swift in Sources */,
+				2D1E7AA9286137A700070A0A /* FirstOnbordingInteractor.swift in Sources */,
+				2D1E7A97286136BC00070A0A /* OurFonts.swift in Sources */,
+				2D1E7A902861363A00070A0A /* StartViewController.swift in Sources */,
 				2D1E7A7B286134B500070A0A /* ViewController.swift in Sources */,
 				2D1E7A77286134B500070A0A /* AppDelegate.swift in Sources */,
+				2D1E7AA8286137A700070A0A /* FirstOnbordingViewController.swift in Sources */,
 				2D1E7A81286134B500070A0A /* Give_a_chance.xcdatamodeld in Sources */,
+				2D1E7AAA286137A700070A0A /* FirstOnbordingConfigurator.swift in Sources */,
+				2D1E7AA6286137A700070A0A /* FirstOnbordingPresenter.swift in Sources */,
+				2D1E7AA7286137A700070A0A /* FirstOnbordingRouter.swift in Sources */,
 				2D1E7A79286134B500070A0A /* SceneDelegate.swift in Sources */,
+				2D1E7A932861367D00070A0A /* PaletteApp.swift in Sources */,
+				2D1E7A9F2861377B00070A0A /* StartOnbording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
