@@ -25,6 +25,21 @@
 		2D1E7AA8286137A700070A0A /* FirstOnbordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA3286137A700070A0A /* FirstOnbordingViewController.swift */; };
 		2D1E7AA9286137A700070A0A /* FirstOnbordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA4286137A700070A0A /* FirstOnbordingInteractor.swift */; };
 		2D1E7AAA286137A700070A0A /* FirstOnbordingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E7AA5286137A700070A0A /* FirstOnbordingConfigurator.swift */; };
+		2D36EF5B2861E3CE007F6FE7 /* SecondOnbordingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF562861E3CE007F6FE7 /* SecondOnbordingPresenter.swift */; };
+		2D36EF5C2861E3CE007F6FE7 /* SecondOnbordingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF572861E3CE007F6FE7 /* SecondOnbordingRouter.swift */; };
+		2D36EF5D2861E3CE007F6FE7 /* SecondOnbordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF582861E3CE007F6FE7 /* SecondOnbordingViewController.swift */; };
+		2D36EF5E2861E3CE007F6FE7 /* SecondOnbordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF592861E3CE007F6FE7 /* SecondOnbordingInteractor.swift */; };
+		2D36EF5F2861E3CE007F6FE7 /* SecondOnbordingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF5A2861E3CE007F6FE7 /* SecondOnbordingConfigurator.swift */; };
+		2D36EF662861E40E007F6FE7 /* ThirdOnbordingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF612861E40E007F6FE7 /* ThirdOnbordingPresenter.swift */; };
+		2D36EF672861E40E007F6FE7 /* ThirdOnbordingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF622861E40E007F6FE7 /* ThirdOnbordingRouter.swift */; };
+		2D36EF682861E40E007F6FE7 /* ThirdOnbordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF632861E40E007F6FE7 /* ThirdOnbordingViewController.swift */; };
+		2D36EF692861E40E007F6FE7 /* ThirdOnbordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF642861E40E007F6FE7 /* ThirdOnbordingInteractor.swift */; };
+		2D36EF6A2861E40E007F6FE7 /* ThirdOnbordingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF652861E40E007F6FE7 /* ThirdOnbordingConfigurator.swift */; };
+		2D36EF6D2861E473007F6FE7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D36EF6C2861E473007F6FE7 /* SnapKit */; };
+		2D36EF7B2861E56E007F6FE7 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF7A2861E56E007F6FE7 /* GradientButton.swift */; };
+		2D36EF7E2861E59C007F6FE7 /* RootMainApplicitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36EF7D2861E59C007F6FE7 /* RootMainApplicitionController.swift */; };
+		2D36EF832861E6F3007F6FE7 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D36EF822861E6F3007F6FE7 /* DMSans-Bold.ttf */; };
+		2D36EF852861E6FC007F6FE7 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D36EF842861E6FC007F6FE7 /* DMSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +63,20 @@
 		2D1E7AA3286137A700070A0A /* FirstOnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingViewController.swift; sourceTree = "<group>"; };
 		2D1E7AA4286137A700070A0A /* FirstOnbordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingInteractor.swift; sourceTree = "<group>"; };
 		2D1E7AA5286137A700070A0A /* FirstOnbordingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnbordingConfigurator.swift; sourceTree = "<group>"; };
+		2D36EF562861E3CE007F6FE7 /* SecondOnbordingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnbordingPresenter.swift; sourceTree = "<group>"; };
+		2D36EF572861E3CE007F6FE7 /* SecondOnbordingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnbordingRouter.swift; sourceTree = "<group>"; };
+		2D36EF582861E3CE007F6FE7 /* SecondOnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnbordingViewController.swift; sourceTree = "<group>"; };
+		2D36EF592861E3CE007F6FE7 /* SecondOnbordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnbordingInteractor.swift; sourceTree = "<group>"; };
+		2D36EF5A2861E3CE007F6FE7 /* SecondOnbordingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnbordingConfigurator.swift; sourceTree = "<group>"; };
+		2D36EF612861E40E007F6FE7 /* ThirdOnbordingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnbordingPresenter.swift; sourceTree = "<group>"; };
+		2D36EF622861E40E007F6FE7 /* ThirdOnbordingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnbordingRouter.swift; sourceTree = "<group>"; };
+		2D36EF632861E40E007F6FE7 /* ThirdOnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnbordingViewController.swift; sourceTree = "<group>"; };
+		2D36EF642861E40E007F6FE7 /* ThirdOnbordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnbordingInteractor.swift; sourceTree = "<group>"; };
+		2D36EF652861E40E007F6FE7 /* ThirdOnbordingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnbordingConfigurator.swift; sourceTree = "<group>"; };
+		2D36EF7A2861E56E007F6FE7 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		2D36EF7D2861E59C007F6FE7 /* RootMainApplicitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMainApplicitionController.swift; sourceTree = "<group>"; };
+		2D36EF822861E6F3007F6FE7 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		2D36EF842861E6FC007F6FE7 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D36EF6D2861E473007F6FE7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +110,9 @@
 		2D1E7A75286134B500070A0A /* Give_a_chance */ = {
 			isa = PBXGroup;
 			children = (
+				2D36EF7F2861E6D6007F6FE7 /* Support files */,
+				2D36EF7C2861E58C007F6FE7 /* MainApplication */,
+				2D36EF6E2861E53E007F6FE7 /* CustomUI */,
 				2D1E7A9C2861376100070A0A /* Onbording */,
 				2D1E7A982861371F00070A0A /* Extensions */,
 				2D1E7A8D2861361400070A0A /* Application */,
@@ -141,6 +174,8 @@
 		2D1E7A9C2861376100070A0A /* Onbording */ = {
 			isa = PBXGroup;
 			children = (
+				2D36EF602861E3F8007F6FE7 /* ThirdOnbording */,
+				2D36EF552861E2B6007F6FE7 /* SecondOnbording */,
 				2D1E7AA02861379400070A0A /* FirstOnbording */,
 				2D1E7A9D2861376B00070A0A /* StartOnbording */,
 			);
@@ -167,6 +202,79 @@
 			path = FirstOnbording;
 			sourceTree = "<group>";
 		};
+		2D36EF552861E2B6007F6FE7 /* SecondOnbording */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF562861E3CE007F6FE7 /* SecondOnbordingPresenter.swift */,
+				2D36EF572861E3CE007F6FE7 /* SecondOnbordingRouter.swift */,
+				2D36EF582861E3CE007F6FE7 /* SecondOnbordingViewController.swift */,
+				2D36EF592861E3CE007F6FE7 /* SecondOnbordingInteractor.swift */,
+				2D36EF5A2861E3CE007F6FE7 /* SecondOnbordingConfigurator.swift */,
+			);
+			path = SecondOnbording;
+			sourceTree = "<group>";
+		};
+		2D36EF602861E3F8007F6FE7 /* ThirdOnbording */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF612861E40E007F6FE7 /* ThirdOnbordingPresenter.swift */,
+				2D36EF622861E40E007F6FE7 /* ThirdOnbordingRouter.swift */,
+				2D36EF632861E40E007F6FE7 /* ThirdOnbordingViewController.swift */,
+				2D36EF642861E40E007F6FE7 /* ThirdOnbordingInteractor.swift */,
+				2D36EF652861E40E007F6FE7 /* ThirdOnbordingConfigurator.swift */,
+			);
+			path = ThirdOnbording;
+			sourceTree = "<group>";
+		};
+		2D36EF6E2861E53E007F6FE7 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF6F2861E547007F6FE7 /* Button */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		2D36EF6F2861E547007F6FE7 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF7A2861E56E007F6FE7 /* GradientButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		2D36EF7C2861E58C007F6FE7 /* MainApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF7D2861E59C007F6FE7 /* RootMainApplicitionController.swift */,
+			);
+			path = MainApplication;
+			sourceTree = "<group>";
+		};
+		2D36EF7F2861E6D6007F6FE7 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF802861E6DF007F6FE7 /* Fonts */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		2D36EF802861E6DF007F6FE7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF812861E6E7007F6FE7 /* DM_Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2D36EF812861E6E7007F6FE7 /* DM_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				2D36EF842861E6FC007F6FE7 /* DMSans-Regular.ttf */,
+				2D36EF822861E6F3007F6FE7 /* DMSans-Bold.ttf */,
+			);
+			path = DM_Sans;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +291,9 @@
 			dependencies = (
 			);
 			name = Give_a_chance;
+			packageProductDependencies = (
+				2D36EF6C2861E473007F6FE7 /* SnapKit */,
+			);
 			productName = Give_a_chance;
 			productReference = 2D1E7A73286134B500070A0A /* Give_a_chance.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +322,9 @@
 				Base,
 			);
 			mainGroup = 2D1E7A6A286134B500070A0A;
+			packageReferences = (
+				2D36EF6B2861E473007F6FE7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2D1E7A74286134B500070A0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,9 +339,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D36EF852861E6FC007F6FE7 /* DMSans-Regular.ttf in Resources */,
 				2D1E7A86286134B600070A0A /* LaunchScreen.storyboard in Resources */,
 				2D1E7A83286134B600070A0A /* Assets.xcassets in Resources */,
 				2D1E7A7E286134B500070A0A /* Main.storyboard in Resources */,
+				2D36EF832861E6F3007F6FE7 /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,16 +359,28 @@
 				2D1E7AA9286137A700070A0A /* FirstOnbordingInteractor.swift in Sources */,
 				2D1E7A97286136BC00070A0A /* OurFonts.swift in Sources */,
 				2D1E7A902861363A00070A0A /* StartViewController.swift in Sources */,
+				2D36EF5C2861E3CE007F6FE7 /* SecondOnbordingRouter.swift in Sources */,
+				2D36EF5E2861E3CE007F6FE7 /* SecondOnbordingInteractor.swift in Sources */,
 				2D1E7A7B286134B500070A0A /* ViewController.swift in Sources */,
+				2D36EF5D2861E3CE007F6FE7 /* SecondOnbordingViewController.swift in Sources */,
 				2D1E7A77286134B500070A0A /* AppDelegate.swift in Sources */,
+				2D36EF7E2861E59C007F6FE7 /* RootMainApplicitionController.swift in Sources */,
+				2D36EF682861E40E007F6FE7 /* ThirdOnbordingViewController.swift in Sources */,
 				2D1E7AA8286137A700070A0A /* FirstOnbordingViewController.swift in Sources */,
+				2D36EF672861E40E007F6FE7 /* ThirdOnbordingRouter.swift in Sources */,
 				2D1E7A81286134B500070A0A /* Give_a_chance.xcdatamodeld in Sources */,
+				2D36EF662861E40E007F6FE7 /* ThirdOnbordingPresenter.swift in Sources */,
 				2D1E7AAA286137A700070A0A /* FirstOnbordingConfigurator.swift in Sources */,
 				2D1E7AA6286137A700070A0A /* FirstOnbordingPresenter.swift in Sources */,
+				2D36EF692861E40E007F6FE7 /* ThirdOnbordingInteractor.swift in Sources */,
 				2D1E7AA7286137A700070A0A /* FirstOnbordingRouter.swift in Sources */,
+				2D36EF5F2861E3CE007F6FE7 /* SecondOnbordingConfigurator.swift in Sources */,
 				2D1E7A79286134B500070A0A /* SceneDelegate.swift in Sources */,
 				2D1E7A932861367D00070A0A /* PaletteApp.swift in Sources */,
 				2D1E7A9F2861377B00070A0A /* StartOnbording.swift in Sources */,
+				2D36EF7B2861E56E007F6FE7 /* GradientButton.swift in Sources */,
+				2D36EF6A2861E40E007F6FE7 /* ThirdOnbordingConfigurator.swift in Sources */,
+				2D36EF5B2861E3CE007F6FE7 /* SecondOnbordingPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +598,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D36EF6B2861E473007F6FE7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D36EF6C2861E473007F6FE7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D36EF6B2861E473007F6FE7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2D1E7A7F286134B500070A0A /* Give_a_chance.xcdatamodeld */ = {

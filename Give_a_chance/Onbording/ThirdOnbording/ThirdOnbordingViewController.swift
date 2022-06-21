@@ -1,5 +1,5 @@
 //
-//  FirstOnbordingViewController.swift
+//  ThirdOnbordingViewController.swift
 //  Give_a_chance
 //
 //  Created by Сергей Лукичев on 21.06.2022.
@@ -9,21 +9,21 @@
 import UIKit
 import SnapKit
 
-// MARK: Protocol - FirstOnbordingPresenterToViewProtocol (Presenter -> View)
-protocol FirstOnbordingPresenterToViewProtocol: AnyObject {
+// MARK: Protocol - ThirdOnbordingPresenterToViewProtocol (Presenter -> View)
+protocol ThirdOnbordingPresenterToViewProtocol: AnyObject {
 
 }
 
-// MARK: Protocol - FirstOnbordingRouterToViewProtocol (Router -> View)
-protocol FirstOnbordingRouterToViewProtocol: AnyObject {
+// MARK: Protocol - ThirdOnbordingRouterToViewProtocol (Router -> View)
+protocol ThirdOnbordingRouterToViewProtocol: AnyObject {
     func presentView(view: UIViewController)
     func pushView(view: UIViewController)
 }
 
-class FirstOnbordingViewController: UIViewController {
+class ThirdOnbordingViewController: UIViewController {
     
     // MARK: - Property
-    var presenter: FirstOnbordingViewToPresenterProtocol!
+    var presenter: ThirdOnbordingViewToPresenterProtocol!
     
     private lazy var skipButton: UIButton = {
         let button = UIButton(frame: .zero)
@@ -37,7 +37,7 @@ class FirstOnbordingViewController: UIViewController {
     
     private lazy var mainImage: UIImageView = {
         let descriptionImage = UIImageView()
-        descriptionImage.image = ListImages.Onbording.firstOnbording
+        descriptionImage.image = ListImages.Onbording.thirdOnbording
         descriptionImage.contentMode = .scaleAspectFit
         
         return descriptionImage
@@ -49,7 +49,7 @@ class FirstOnbordingViewController: UIViewController {
         label.font = OurFonts.fontPTSansBold20
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.text = "Помоги в один клик".uppercased()
+        label.text = "Помогать легко".uppercased()
         
         return label
     }()
@@ -93,8 +93,8 @@ class FirstOnbordingViewController: UIViewController {
         presenter.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
         nextButton.clipsToBounds = true
         nextButton.layer.cornerRadius = nextButton.frame.size.height / 2
@@ -145,17 +145,17 @@ class FirstOnbordingViewController: UIViewController {
     }
     
     @objc private func nextButtonTapped() {
-        presenter.nextButtonTapped()
+//        presenter.nextButtonTapped()
     }
 }
 
-// MARK: Extension - FirstOnbordingPresenterToViewProtocol
-extension FirstOnbordingViewController: FirstOnbordingPresenterToViewProtocol{
+// MARK: Extension - ThirdOnbordingPresenterToViewProtocol
+extension ThirdOnbordingViewController: ThirdOnbordingPresenterToViewProtocol{
     
 }
 
-// MARK: Extension - FirstOnbordingRouterToViewProtocol
-extension FirstOnbordingViewController: FirstOnbordingRouterToViewProtocol{
+// MARK: Extension - ThirdOnbordingRouterToViewProtocol
+extension ThirdOnbordingViewController: ThirdOnbordingRouterToViewProtocol{
     func presentView(view: UIViewController) {
         present(view, animated: true, completion: nil)
     }

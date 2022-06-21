@@ -10,7 +10,8 @@ import Foundation
 
 // MARK: Protocol - FirstOnbordingViewToPresenterProtocol (View -> Presenter)
 protocol FirstOnbordingViewToPresenterProtocol: AnyObject {
-	func viewDidLoad()
+    func viewDidLoad()
+    func nextButtonTapped()
 }
 
 // MARK: Protocol - FirstOnbordingInteractorToPresenterProtocol (Interactor -> Presenter)
@@ -28,8 +29,13 @@ class FirstOnbordingPresenter {
 
 // MARK: Extension - FirstOnbordingViewToPresenterProtocol
 extension FirstOnbordingPresenter: FirstOnbordingViewToPresenterProtocol {
+
     func viewDidLoad() {
     
+    }
+    
+    func nextButtonTapped() {
+        router.navigationToSecondOnbording()
     }
 }
 

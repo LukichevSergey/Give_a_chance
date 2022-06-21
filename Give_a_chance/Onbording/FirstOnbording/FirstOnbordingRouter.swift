@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: Protocol - FirstOnbordingPresenterToRouterProtocol (Presenter -> Router)
 protocol FirstOnbordingPresenterToRouterProtocol: AnyObject {
-
+    func navigationToSecondOnbording()
 }
 
 class FirstOnbordingRouter {
@@ -21,5 +21,8 @@ class FirstOnbordingRouter {
 
 // MARK: Extension - FirstOnbordingPresenterToRouterProtocol
 extension FirstOnbordingRouter: FirstOnbordingPresenterToRouterProtocol {
-    
+    func navigationToSecondOnbording() {
+        let secondOnbodribgViewConfiguration = SecondOnbordingConfigurator()
+        view.pushView(view: secondOnbodribgViewConfiguration.configure())
+    }
 }
