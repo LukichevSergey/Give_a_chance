@@ -11,6 +11,8 @@ import Foundation
 // MARK: Protocol - ThirdOnbordingViewToPresenterProtocol (View -> Presenter)
 protocol ThirdOnbordingViewToPresenterProtocol: AnyObject {
 	func viewDidLoad()
+    func nextButtonTapped()
+    func skipButtonTapped()
 }
 
 // MARK: Protocol - ThirdOnbordingInteractorToPresenterProtocol (Interactor -> Presenter)
@@ -30,6 +32,14 @@ class ThirdOnbordingPresenter {
 extension ThirdOnbordingPresenter: ThirdOnbordingViewToPresenterProtocol {
     func viewDidLoad() {
     
+    }
+    
+    func nextButtonTapped() {
+        router.navigationToRetrievedViewController()
+    }
+    
+    func skipButtonTapped() {
+        router.navigationToRetrievedViewController()
     }
 }
 

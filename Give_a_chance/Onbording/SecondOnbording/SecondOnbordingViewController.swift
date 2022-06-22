@@ -31,6 +31,7 @@ class SecondOnbordingViewController: UIViewController {
         button.setTitleColor(PaletteApp.black, for: .normal)
         button.setTitle("Пропустить".uppercased(), for: .normal)
         button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         
         return button
     }()
@@ -146,6 +147,10 @@ class SecondOnbordingViewController: UIViewController {
     
     @objc private func nextButtonTapped() {
         presenter.nextButtonTapped()
+    }
+    
+    @objc private func skipButtonTapped() {
+        presenter.skipButtonTapped()
     }
 }
 

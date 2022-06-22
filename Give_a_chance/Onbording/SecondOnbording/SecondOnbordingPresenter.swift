@@ -12,6 +12,7 @@ import Foundation
 protocol SecondOnbordingViewToPresenterProtocol: AnyObject {
     func viewDidLoad()
     func nextButtonTapped()
+    func skipButtonTapped()
 }
 
 // MARK: Protocol - SecondOnbordingInteractorToPresenterProtocol (Interactor -> Presenter)
@@ -35,6 +36,10 @@ extension SecondOnbordingPresenter: SecondOnbordingViewToPresenterProtocol {
     
     func nextButtonTapped() {
         router.navigationToThirdOnbording()
+    }
+    
+    func skipButtonTapped() {
+        router.navigationToRetrievedViewController()
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: Protocol - ThirdOnbordingPresenterToRouterProtocol (Presenter -> Router)
 protocol ThirdOnbordingPresenterToRouterProtocol: AnyObject {
-
+    func navigationToRetrievedViewController()
 }
 
 class ThirdOnbordingRouter {
@@ -21,5 +21,8 @@ class ThirdOnbordingRouter {
 
 // MARK: Extension - ThirdOnbordingPresenterToRouterProtocol
 extension ThirdOnbordingRouter: ThirdOnbordingPresenterToRouterProtocol {
-    
+    func navigationToRetrievedViewController() {
+        let retrievedViewController = RetrievedConfigurator()
+        view.pushView(view: retrievedViewController.configure())
+    }
 }

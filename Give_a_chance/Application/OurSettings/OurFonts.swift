@@ -26,4 +26,5 @@ enum OurFonts {
     static var fontPTSansRegular14: UIFont { UIFont(name: "DMSans-Regular", size: 14)! }
     static var fontPTSansRegular12: UIFont { UIFont(name: "DMSans-Regular", size: 12)! }
     static var fontPTSansRegular11: UIFont { UIFont(name: "DMSans-Regular", size: 11)! }
+    static var fontPTSansRegular10: UIFont { UIFont(name: "DMSans-Regular", size: 10)! }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    @Storage(key: SettingsNames.firstStartApp, defaultValue: false) private var notFirstStart: Bool
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -21,6 +22,8 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = PaletteApp.white
+        
+        FileManager.default.clearTmpDirectory()
     }
     
     override func viewDidAppear(_ animated: Bool) {
