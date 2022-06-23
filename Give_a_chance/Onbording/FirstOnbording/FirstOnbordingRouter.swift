@@ -11,7 +11,7 @@ import Foundation
 // MARK: Protocol - FirstOnbordingPresenterToRouterProtocol (Presenter -> Router)
 protocol FirstOnbordingPresenterToRouterProtocol: AnyObject {
     func navigationToSecondOnbording()
-    func navigationToRetrievedViewController()
+    func navigationToRootViewController()
 }
 
 class FirstOnbordingRouter {
@@ -27,8 +27,9 @@ extension FirstOnbordingRouter: FirstOnbordingPresenterToRouterProtocol {
         view.pushView(view: secondOnbodribgViewConfiguration.configure())
     }
     
-    func navigationToRetrievedViewController() {
-        let retrievedViewController = RetrievedConfigurator()
-        view.pushView(view: retrievedViewController.configure())
+    func navigationToRootViewController() {
+        let mainApplication = RootMainApplicitionController()
+        mainApplication.modalPresentationStyle = .fullScreen
+        view.presentView(view: mainApplication)
     }
 }

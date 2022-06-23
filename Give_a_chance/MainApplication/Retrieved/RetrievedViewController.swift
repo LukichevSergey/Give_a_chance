@@ -115,7 +115,7 @@ class RetrievedViewController: UIViewController {
         
         rectangle.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(30)
+            make.bottom.equalToSuperview().inset(150)
             make.width.equalTo(327)
             make.height.equalTo(148)
         }
@@ -128,8 +128,6 @@ class RetrievedViewController: UIViewController {
         
         sticker.configure(image: UIImage(named: "slider")!, title: "Подарить шанс на здоровье", subtitle: "Помогите прямо сейчас")
     }
-    
-
 }
 
 // MARK: Extension - RetrievedPresenterToViewProtocol 

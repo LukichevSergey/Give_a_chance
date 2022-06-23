@@ -39,7 +39,7 @@ extension SecondOnbordingPresenter: SecondOnbordingViewToPresenterProtocol {
     }
     
     func skipButtonTapped() {
-        router.navigationToRetrievedViewController()
+        router.navigationToRootViewController()
     }
 }
 

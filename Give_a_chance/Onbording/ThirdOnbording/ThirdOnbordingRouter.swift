@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: Protocol - ThirdOnbordingPresenterToRouterProtocol (Presenter -> Router)
 protocol ThirdOnbordingPresenterToRouterProtocol: AnyObject {
-    func navigationToRetrievedViewController()
+    func navigationToRootViewController()
 }
 
 class ThirdOnbordingRouter {
@@ -21,8 +21,9 @@ class ThirdOnbordingRouter {
 
 // MARK: Extension - ThirdOnbordingPresenterToRouterProtocol
 extension ThirdOnbordingRouter: ThirdOnbordingPresenterToRouterProtocol {
-    func navigationToRetrievedViewController() {
-        let retrievedViewController = RetrievedConfigurator()
-        view.pushView(view: retrievedViewController.configure())
+    func navigationToRootViewController() {
+        let mainApplication = RootMainApplicitionController()
+        mainApplication.modalPresentationStyle = .fullScreen
+        view.presentView(view: mainApplication)
     }
 }

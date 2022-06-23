@@ -40,7 +40,7 @@ extension FirstOnbordingPresenter: FirstOnbordingViewToPresenterProtocol {
     }
     
     func skipButtonTapped() {
-        router.navigationToRetrievedViewController()
+        router.navigationToRootViewController()
     }
 }
 

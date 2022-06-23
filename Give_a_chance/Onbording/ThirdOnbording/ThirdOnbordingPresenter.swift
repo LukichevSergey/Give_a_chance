@@ -35,11 +35,11 @@ extension ThirdOnbordingPresenter: ThirdOnbordingViewToPresenterProtocol {
     }
     
     func nextButtonTapped() {
-        router.navigationToRetrievedViewController()
+        router.navigationToRootViewController()
     }
     
     func skipButtonTapped() {
-        router.navigationToRetrievedViewController()
+        router.navigationToRootViewController()
     }
 }
 
