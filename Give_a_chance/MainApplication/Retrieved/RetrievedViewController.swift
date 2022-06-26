@@ -25,34 +25,37 @@ class RetrievedViewController: UIViewController {
     // MARK: - Property
     var presenter: RetrievedViewToPresenterProtocol!
     
-    private lazy var topGrayView: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = PaletteApp.gray
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = PaletteApp.black
+        label.font = OurFonts.fontPTSansBold16
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.text = "Пожертвования"
         
-        return view
+        return label
     }()
     
-    private lazy var girlImage: UIImageView = {
-        let girlImage = UIImageView()
-        girlImage.image = UIImage(named: "girl")
-        girlImage.contentMode = .scaleAspectFit
+    private lazy var subtitleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = PaletteApp.darkGray
+        label.font = OurFonts.fontPTSansRegular10
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.text = "*Суммы пожертвования в данном разделе обновляются \"Онлайн\" (Онлайн переводы: Банковские карты, G-Pay, Apple Pay, Яндекс.Деньги, SMS)"
         
-        return girlImage
+        return label
     }()
     
-    private lazy var slider: CustomSlider = {
-        let slider = CustomSlider()
-        return slider
-    }()
-    
-    private lazy var rectangle: Rectangle = {
-        let rectangle = Rectangle()
+    private lazy var loopButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "loop"), for: .normal)
 
-        return rectangle
+        return button
     }()
     
-    private lazy var sticker: Sticker = {
-        let view = Sticker()
+    private lazy var test: ReceiptTableCellView = {
+        let view = ReceiptTableCellView()
         
         return view
     }()
@@ -79,54 +82,38 @@ class RetrievedViewController: UIViewController {
     
     // MARK: - private func
     private func commonInit() {
-        slider.minimumValue = 5
-        slider.maximumValue = 50
-        slider.value = 25
-        slider.isContinuous = true
-        slider.tintColor = UIColor(hex: "#F9BECB")
-        slider.setThumbImage(UIImage(named: "slider"), for: .normal)
-        
-        slider.setSlider(slider: slider)
+
     }
 
     private func configureUI() {
         view.backgroundColor = PaletteApp.white
         
-        view.addSubview(slider)
-        view.addSubview(topGrayView)
-        topGrayView.addSubview(girlImage)
-        view.addSubview(rectangle)
-        view.addSubview(sticker)
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
+        view.addSubview(loopButton)
         
-        slider.snp.makeConstraints { make in
-            make.width.equalTo(300)
-            make.height.equalTo(20)
-            make.center.equalToSuperview()
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(55)
+            make.right.left.equalToSuperview().inset(16)
         }
         
-        topGrayView.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview()
-            make.height.equalTo(375)
+        subtitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(9)
+            make.right.left.equalToSuperview().inset(16)
         }
         
-        girlImage.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(12)
+        loopButton.snp.makeConstraints { make in
+            make.centerY.equalTo(titleLabel)
+            make.right.equalToSuperview().inset(22)
         }
         
-        rectangle.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(150)
-            make.width.equalTo(327)
-            make.height.equalTo(148)
-        }
-        rectangle.configure(width: 327, height: 148)
         
-        sticker.snp.makeConstraints { make in
-            make.bottom.equalTo(rectangle.snp.top).inset(-12)
-            make.left.equalToSuperview()
+        view.addSubview(test)
+        test.snp.makeConstraints { make in
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(15)
+            make.right.equalToSuperview().inset(22)
+            make.left.equalToSuperview().inset(16)
         }
-        
-        sticker.configure(image: UIImage(named: "slider")!, title: "Подарить шанс на здоровье", subtitle: "Помогите прямо сейчас")
     }
 }
 

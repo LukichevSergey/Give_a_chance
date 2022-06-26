@@ -23,6 +23,38 @@ class PromotionViewController: UIViewController {
     
     // MARK: - Property
     var presenter: PromotionViewToPresenterProtocol!
+    
+    private lazy var topGrayView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = PaletteApp.gray
+        
+        return view
+    }()
+    
+    private lazy var girlImage: UIImageView = {
+        let girlImage = UIImageView()
+        girlImage.image = UIImage(named: "girl")
+        girlImage.contentMode = .scaleAspectFit
+        
+        return girlImage
+    }()
+    
+    private lazy var slider: CustomSlider = {
+        let slider = CustomSlider()
+        return slider
+    }()
+    
+    private lazy var rectangle: Rectangle = {
+        let rectangle = Rectangle()
+
+        return rectangle
+    }()
+    
+    private lazy var sticker: Sticker = {
+        let view = Sticker()
+        
+        return view
+    }()
 
     // MARK: - init
     init() {
@@ -46,11 +78,55 @@ class PromotionViewController: UIViewController {
     
     // MARK: - private func
     private func commonInit() {
-
+        slider.minimumValue = 5
+        slider.maximumValue = 50
+        slider.value = 25
+        slider.isContinuous = true
+        slider.tintColor = UIColor(hex: "#F9BECB")
+        slider.setThumbImage(UIImage(named: "slider"), for: .normal)
+        
+        slider.setSlider(slider: slider)
     }
 
     private func configureUI() {
-        view.backgroundColor = .red
+        
+        view.backgroundColor = PaletteApp.white
+        
+        view.addSubview(slider)
+        view.addSubview(topGrayView)
+        topGrayView.addSubview(girlImage)
+        view.addSubview(rectangle)
+        view.addSubview(sticker)
+        
+        slider.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.equalTo(20)
+            make.center.equalToSuperview()
+        }
+        
+        topGrayView.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(375)
+        }
+        
+        girlImage.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(12)
+        }
+        
+        rectangle.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(150)
+            make.width.equalTo(327)
+            make.height.equalTo(148)
+        }
+        rectangle.configure(width: 327, height: 148)
+        
+        sticker.snp.makeConstraints { make in
+            make.bottom.equalTo(rectangle.snp.top).inset(-12)
+            make.left.equalToSuperview()
+        }
+        
+        sticker.configure(image: UIImage(named: "slider")!, title: "Подарить шанс на здоровье", subtitle: "Помогите прямо сейчас")
     }
 }
 

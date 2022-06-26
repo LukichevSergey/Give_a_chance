@@ -74,6 +74,7 @@
 		2D66CC132863404F005DE590 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D66CC0E2863404F005DE590 /* ProfileInteractor.swift */; };
 		2D66CC142863404F005DE590 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D66CC0F2863404F005DE590 /* ProfileConfigurator.swift */; };
 		2D85B8EB2862BA9200C71F74 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D85B8EA2862BA9200C71F74 /* UIView+RoundCorners.swift */; };
+		2DBEECAF2864A4080027E35A /* ReceiptTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBEECAE2864A4080027E35A /* ReceiptTableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		2D66CC0E2863404F005DE590 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		2D66CC0F2863404F005DE590 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		2D85B8EA2862BA9200C71F74 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		2DBEECAE2864A4080027E35A /* ReceiptTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 		2D36EF6E2861E53E007F6FE7 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				2DBEECAD2864A3DF0027E35A /* View */,
 				2D38E3562862B26F0052138F /* Sticker */,
 				2D25E669286206A90097462C /* Slider */,
 				2D25E666286206530097462C /* Rectangle */,
@@ -489,6 +492,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		2DBEECAD2864A3DF0027E35A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBEECAE2864A4080027E35A /* ReceiptTableCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -590,6 +601,7 @@
 				2D36EF5E2861E3CE007F6FE7 /* SecondOnbordingInteractor.swift in Sources */,
 				2D25E6642861ED720097462C /* RetrievedInteractor.swift in Sources */,
 				2D25E66B286206BD0097462C /* CustomSlider.swift in Sources */,
+				2DBEECAF2864A4080027E35A /* ReceiptTableCellView.swift in Sources */,
 				2D1E7A7B286134B500070A0A /* ViewController.swift in Sources */,
 				2D85B8EB2862BA9200C71F74 /* UIView+RoundCorners.swift in Sources */,
 				2D66CC132863404F005DE590 /* ProfileInteractor.swift in Sources */,

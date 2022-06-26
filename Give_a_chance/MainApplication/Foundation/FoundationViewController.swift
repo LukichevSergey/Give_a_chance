@@ -23,6 +23,28 @@ class FoundationViewController: UIViewController {
     
     // MARK: - Property
     var presenter: FoundationViewToPresenterProtocol!
+    
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = PaletteApp.black
+        label.font = OurFonts.fontPTSansBold16
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.text = "O фонде"
+        
+        return label
+    }()
+    
+    private lazy var firstParagraphLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = PaletteApp.black
+        label.font = OurFonts.fontPTSansRegular10
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.text = "Обществу становится все труднее справляться с растущими социальными проблемами. Сегодня миллионы людей нуждаются в поддержке. Поэтому как никогда стала актуальна благотворительность, помогающая справиться с жизненными трудностями.\n\nБлаготворительный фонд «Подари шанс» для нуждающихся людей оказывает помощь разного рода: материальную, психологическую, юридическую.\n\nВ основе его деятельности – социальная защита и поддержка тех, кто в этом остро нуждается. Фонд финансирует благотворительные программы, инвестируя в них средства благотворителей. Основные источники финансирования – средства от частных и общественных благотворителей.\n\nНаша цель – обеспечить взаимодействие между благотворителями и получателями помощи."
+        
+        return label
+    }()
 
     // MARK: - init
     init() {
@@ -50,7 +72,20 @@ class FoundationViewController: UIViewController {
     }
 
     private func configureUI() {
-        view.backgroundColor = .yellow
+        view.backgroundColor = PaletteApp.white
+        
+        view.addSubview(titleLabel)
+        view.addSubview(firstParagraphLabel)
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.right.left.equalToSuperview().inset(16)
+        }
+        
+        firstParagraphLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(23)
+            make.right.left.equalToSuperview().inset(16)
+        }
     }
 }
 

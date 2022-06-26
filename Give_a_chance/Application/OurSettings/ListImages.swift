@@ -15,4 +15,10 @@ enum ListImages {
         static let secondOnbording = UIImage(named: "secondOnbording")
         static let thirdOnbording = UIImage(named: "thirdOnbording")
     }
+    
+    // MARK: - Retrieved
+    enum Retrieved {
+        static let checkGreen = UIImage(named: "checkGreen")
+        static let loadingOrange = UIImage(named: "loadingOrange")
+    }
 }
