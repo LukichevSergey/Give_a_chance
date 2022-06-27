@@ -46,13 +46,13 @@ class RootMainApplicitionController: UITabBarController {
             if item == 2 {continue}
             items[item].image = views[item]
         }
-
-        tabBar.tintColor = UIColor(hex: "#F4647D")
+        
+        tabBar.isHidden = true
 
         let customTabBar = CustomTabBar()
         customTabBar.items = items
         customTabBar.tintColor = UIColor(hex: "#F4647D")
-        customTabBar.delegate = self
+
         view.addSubview(customTabBar)
         customTabBar.snp.makeConstraints { make in
             make.bottom.right.left.equalToSuperview()

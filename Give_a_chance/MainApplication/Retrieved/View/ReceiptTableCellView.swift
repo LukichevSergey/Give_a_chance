@@ -9,9 +9,15 @@ import UIKit
 
 class ReceiptTableCellView: UIView {
     
+    private lazy var contentView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = PaletteApp.white
+        
+        return view
+    }()
+    
     private lazy var iconImage: UIImageView = {
         let iconImage = UIImageView()
-        iconImage.image = ListImages.Retrieved.checkGreen
         iconImage.contentMode = .scaleAspectFit
         
         return iconImage
@@ -85,16 +91,18 @@ class ReceiptTableCellView: UIView {
     
     private func commonInit() {
         backgroundColor = PaletteApp.white
+        layer.cornerRadius = 10
+        clipsToBounds = true
         
-        nameLabel.text = "Алиматдинов Даутбек"
-        cardNumberLabel.text = "******62481"
+        addSubview(contentView)
+        contentView.addSubview(iconImage)
+        contentView.addSubview(nameStack)
+        contentView.addSubview(amountStack)
         
-        amountLabel.text = "500 ₽"
-        dateLabel.text = "19.08.2021"
-        
-        addSubview(iconImage)
-        addSubview(nameStack)
-        addSubview(amountStack)
+        contentView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(2)
+            make.bottom.top.equalToSuperview().inset(5)
+        }
         
         iconImage.snp.makeConstraints { make in
             make.width.height.equalTo(18)
@@ -113,19 +121,26 @@ class ReceiptTableCellView: UIView {
         }
     }
     
-    func configure() {
+    func configure(withItemModel item: ReceiptModel) {
+        nameLabel.text = item.name
+        cardNumberLabel.text = item.card
         
+        amountLabel.text = "\(item.amount) ₽"
+        dateLabel.text = item.date
+        
+        iconImage.image = item.status.getIcon
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.cornerRadius = 10
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 1)
-        layer.shadowOpacity = 0.45
-        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shadowRadius = 10.0
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = 10
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        contentView.layer.shadowRadius = 3.0
+        contentView.layer.shadowOpacity = 0.15
+        contentView.layer.masksToBounds = false
     }
 }
+

@@ -29,7 +29,7 @@ class HelpPresenter {
 // MARK: Extension - HelpViewToPresenterProtocol
 extension HelpPresenter: HelpViewToPresenterProtocol {
     func viewDidLoad() {
-    
+        view.updateCollection(with: interactor.data)
     }
 }
 

@@ -11,7 +11,7 @@ import SnapKit
 
 // MARK: Protocol - RetrievedPresenterToViewProtocol (Presenter -> View)
 protocol RetrievedPresenterToViewProtocol: AnyObject {
-
+    func updateTable(withItems items: [ReceiptModel])
 }
 
 // MARK: Protocol - RetrievedRouterToViewProtocol (Router -> View)
@@ -21,6 +21,11 @@ protocol RetrievedRouterToViewProtocol: AnyObject {
 }
 
 class RetrievedViewController: UIViewController {
+    
+    // MARK: - Enum for UITableViewDiffableDataSource
+    enum Section: CaseIterable {
+        case main
+    }
     
     // MARK: - Property
     var presenter: RetrievedViewToPresenterProtocol!
@@ -54,11 +59,29 @@ class RetrievedViewController: UIViewController {
         return button
     }()
     
-    private lazy var test: ReceiptTableCellView = {
-        let view = ReceiptTableCellView()
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.register(ReceiptTableCell.self, forCellReuseIdentifier:  ReceiptTableCell.reuseIdentifier)
+        tableView.keyboardDismissMode = .onDrag
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = PaletteApp.white
+        tableView.delegate = self
         
-        return view
+        return tableView
     }()
+    
+    private lazy var dataSource = UITableViewDiffableDataSource<Section, ReceiptModel>(tableView: tableView) { tableView, indexPath, item in
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReceiptTableCell.reuseIdentifier, for: indexPath) as? ReceiptTableCell
+        else {
+            return UITableViewCell(style: .default, reuseIdentifier: nil)
+        }
+
+        cell.configuration(withItemModel: item)
+
+        return cell
+    }
 
     // MARK: - init
     init() {
@@ -91,6 +114,7 @@ class RetrievedViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(loopButton)
+        view.addSubview(tableView)
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(55)
@@ -107,19 +131,24 @@ class RetrievedViewController: UIViewController {
             make.right.equalToSuperview().inset(22)
         }
         
-        
-        view.addSubview(test)
-        test.snp.makeConstraints { make in
-            make.top.equalTo(subtitleLabel.snp.bottom).offset(15)
-            make.right.equalToSuperview().inset(22)
-            make.left.equalToSuperview().inset(16)
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(9)
+            make.right.left.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview()
         }
+        
     }
 }
 
 // MARK: Extension - RetrievedPresenterToViewProtocol 
 extension RetrievedViewController: RetrievedPresenterToViewProtocol{
-    
+    func updateTable(withItems items: [ReceiptModel]) {
+
+        var snapshot = NSDiffableDataSourceSnapshot<Section, ReceiptModel>()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems(items, toSection: Section.main)
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
 }
 
 // MARK: Extension - RetrievedRouterToViewProtocol
@@ -130,6 +159,13 @@ extension RetrievedViewController: RetrievedRouterToViewProtocol{
 
     func pushView(view: UIViewController) {
         navigationController?.pushViewController(view, animated: true)
+    }
+}
+
+// MARK: Extension - UITableViewDelegate
+extension RetrievedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
     }
 }
 

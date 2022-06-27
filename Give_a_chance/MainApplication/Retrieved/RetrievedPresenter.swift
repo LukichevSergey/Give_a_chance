@@ -29,7 +29,7 @@ class RetrievedPresenter {
 // MARK: Extension - RetrievedViewToPresenterProtocol
 extension RetrievedPresenter: RetrievedViewToPresenterProtocol {
     func viewDidLoad() {
-    
+        view.updateTable(withItems: interactor.data)
     }
 }
 
