@@ -27,11 +27,7 @@ class RootMainApplicitionController: UITabBarController {
         foundationViewController.title = "О фонде"
         profileViewController.title = "Профиль"
 
-        setViewControllers([retrievedViewController,
-                            promotionViewController,
-                            helpViewController,
-                            foundationViewController,
-                            profileViewController ], animated: false)
+        viewControllers = [retrievedViewController, promotionViewController, helpViewController, foundationViewController, profileViewController]
 
         guard let items = self.tabBar.items else { return }
 
