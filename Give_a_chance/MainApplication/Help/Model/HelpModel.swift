@@ -23,11 +23,15 @@ class HelpModel: Hashable {
     let name: String
     let status: String
     let diagnosis: String
+    let neededAmount: Int?
+    let collectedAmount: Int?
     
-    init(image: String, name: String, status: String, diagnosis: String) {
+    internal init(image: String, name: String, status: String, diagnosis: String, neededAmount: Int? = nil, collectedAmount: Int? = nil) {
         self.image = image
         self.name = name
         self.status = status
         self.diagnosis = diagnosis
+        self.neededAmount = neededAmount
+        self.collectedAmount = collectedAmount
     }
 }

@@ -28,26 +28,30 @@ class HelpViewController: UIViewController {
     // MARK: - Property
     var presenter: HelpViewToPresenterProtocol!
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 22, left: 22, bottom: 22, right: 22)
-        layout.minimumLineSpacing = 22
-        layout.minimumInteritemSpacing = 22
-        layout.scrollDirection = .vertical
-        layout.estimatedItemSize = CGSize(width: view.bounds.size.width, height: 500)
+    private lazy var segmentedControll: CustomSegmentedControl = {
+        let segmentedControll = CustomSegmentedControl()
+        segmentedControll.delegate = self
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
-        collectionView.register(HelpCollectionCell.self, forCellWithReuseIdentifier: HelpCollectionCell.reuseIdentifier)
-        collectionView.delegate = self
-        return collectionView
+        return segmentedControll
     }()
     
-    private lazy var dataSource = UICollectionViewDiffableDataSource<Section, HelpModel>(collectionView: collectionView) { collectionView, indexPath, item in
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HelpCollectionCell.reuseIdentifier, for: indexPath) as? HelpCollectionCell else {
-            return UICollectionViewCell(frame: .zero)
-        }
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.register(HelpTableCell.self, forCellReuseIdentifier:  HelpTableCell.reuseIdentifier)
+        tableView.keyboardDismissMode = .onDrag
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = PaletteApp.helpTableBackgroundGray
         
+        return tableView
+    }()
+    
+    private lazy var dataSource = UITableViewDiffableDataSource<Section, HelpModel>(tableView: tableView) { tableView, indexPath, item in
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HelpTableCell.reuseIdentifier, for: indexPath) as? HelpTableCell
+        else {
+            return UITableViewCell(style: .default, reuseIdentifier: nil)
+        }
+
         cell.configuration(withItemModel: item)
 
         return cell
@@ -79,10 +83,19 @@ class HelpViewController: UIViewController {
     }
 
     private func configureUI() {
+        view.backgroundColor = PaletteApp.helpTableBackgroundGray
         
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        view.addSubview(segmentedControll)
+        segmentedControll.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.right.equalToSuperview().inset(16)
+        }
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(segmentedControll.snp.bottom).offset(12)
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
 }
@@ -108,6 +121,9 @@ extension HelpViewController: HelpRouterToViewProtocol{
     }
 }
 
-extension HelpViewController: UICollectionViewDelegate {
-    
+// MARK: Extension - CustomSegmentedControlDelegate
+extension HelpViewController: CustomSegmentedControlDelegate {
+    func segmentedControlTapped(withStatus status: CustomSegmentedControlElement.Status) {
+        presenter.segmentedControlTapped(withStatus: status)
+    }
 }

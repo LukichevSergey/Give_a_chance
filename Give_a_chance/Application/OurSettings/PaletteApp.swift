@@ -11,10 +11,12 @@ struct PaletteApp {
     
     //MARK: - Colors
     
-    static var white:       UIColor { return UIColor(hex: "#FFFFFF") }  // белый
-    static var black:       UIColor { return UIColor(hex: "#000000") }  // черный
-    static var gray:        UIColor { return UIColor(hex: "#EAEFF2") }  // Cерый
-    static var darkGray:    UIColor { return UIColor(hex: "#8D8D8D") }  // Темносерый
+    static var white:                      UIColor { return UIColor(hex: "#FFFFFF") }  // белый
+    static var black:                      UIColor { return UIColor(hex: "#000000") }  // черный
+    static var gray:                       UIColor { return UIColor(hex: "#EAEFF2") }  // Cерый
+    static var darkGray:                   UIColor { return UIColor(hex: "#8D8D8D") }  // Темносерый
+    static var helpTableBackgroundGray:    UIColor { return UIColor(hex: "#E5E5E5") }  // Темносерый бэкграунд таблицы экрана помощи
+    static var segmentBackgroundGray:      UIColor { return UIColor(hex: "#F6F6F6") }  // серый бэкграунд сегментед контрола
 
     //MARK: - Gradients
     
